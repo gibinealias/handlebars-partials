@@ -1,0 +1,17 @@
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> <!-- Includes jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script> <!-- Includes Handlebars.js -->
+  <script src="main.js"></script> <!-- Includes main.js -->
+</head>
+<body>
+  <div id="results">
+    <script id="base-template" type="text/x-handlebars-template">
+      <article class="card card_single-view">
+        <h4>{{title}}</h4> <!-- This won't print anything unless in an each loop or use {{data.[0].title}} instead-->
+        {{> cards-list}} <!-- Calling the partial -->
+      </article>
+    </script>
+  </div>
+</body>
+</html>
